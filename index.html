@@ -138,15 +138,55 @@
 </head>
 
 <body>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/courses.html">Courses</a>
-        <a href="/about.html">About Us</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/testimonial.html">Testimonial</a>
-        <a href="/partner.html">Partner</a>
-        <a href="/blogs.html">Blogs</a>
+   <nav class="bg-white border-b shadow-md">
+          <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="/" class="flex items-center">
+              <img src="https://aitrainingtech.com/images/logo.png" alt="AiTrainingTech Logo" class="h-10 mr-2">
+              <span class="text-xl font-semibold text-gray-800">AiTrainingTech</span>
+            </a>
+        
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-6 text-sm font-medium text-gray-700">
+              <a href="/" class="hover:text-orange-600">Home</a>
+              <a href="/courses.html" class="hover:text-orange-600">Courses</a>
+              <a href="/about.html" class="hover:text-orange-600">About Us</a>
+              <a href="/blog.html" class="hover:text-orange-600">Blog</a>
+              <a href="/testimonials.html" class="hover:text-orange-600">Testimonials</a>
+              <a href="/partners.html" class="hover:text-orange-600">Partners</a>
+              <a href="/contact.html" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Contact</a>
+            </nav>
+        
+            <!-- Mobile Toggle -->
+            <div class="md:hidden">
+              <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        
+          <!-- Mobile Menu -->
+          <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 space-y-2 text-sm font-medium text-gray-700">
+            <a href="/" class="block hover:text-orange-600">Home</a>
+            <a href="/courses.html" class="block hover:text-orange-600">Courses</a>
+            <a href="/about.html" class="block hover:text-orange-600">About Us</a>
+            <a href="/blog.html" class="block hover:text-orange-600">Blog</a>
+            <a href="/testimonials.html" class="block hover:text-orange-600">Testimonials</a>
+            <a href="/partners.html" class="block hover:text-orange-600">Partners</a>
+            <a href="/contact.html" class="block bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Contact</a>
+          </div>
+        
+          <script>
+            document.getElementById('menu-toggle').onclick = function () {
+              document.getElementById('mobile-menu').classList.toggle('hidden');
+            };
+          </script>
     </nav>
+
+
+
 
     <header>
         <h1>AI-Powered Courses for Your Career</h1>
