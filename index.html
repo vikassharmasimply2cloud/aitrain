@@ -6,6 +6,8 @@
   <title>AiTrainingTech - Learn AI for Animation, Marketing & Coding</title>
   <meta name="description" content="Join AI-powered in-person courses in Rohini, Delhi. Master animation, marketing, and coding tools with real projects and expert trainers.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     body { font-family: 'Inter', sans-serif; margin: 0; background-color: #F9F5F0; color: #1C1F38; }
     header {
@@ -105,12 +107,80 @@
   </style>
 </head>
 <body>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/courses">Courses</a>
-    <a href="/about.html">About Us</a>
-    <a href="/contact.html">Contact</a>
-  </nav>
+     <nav class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16">
+            <div class="flex">
+              <a href="index.html">
+                <img src="Logo.png" class="h-10 w-auto mt-2" alt="Logo">
+              </a>
+            </div>
+            <div class="hidden md:flex space-x-4 items-center">
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="about.html" class="nav-link">About</a>
+    
+              <!-- Courses Dropdown -->
+              <div class="relative group">
+                <button class="nav-link">Courses</button>
+                <div class="absolute hidden group-hover:block bg-white border mt-1 rounded shadow-md z-10">
+                  <a href="courses.html#web" class="block px-4 py-2 hover:bg-gray-100">Web Development</a>
+                  <a href="courses.html#data" class="block px-4 py-2 hover:bg-gray-100">Data Science</a>
+                </div>
+              </div>
+    
+              <!-- Blogs Dropdown -->
+              <div class="relative group">
+                <button class="nav-link">Blogs</button>
+                <div class="absolute hidden group-hover:block bg-white border mt-1 rounded shadow-md z-10">
+                  <a href="blogs.html#tech" class="block px-4 py-2 hover:bg-gray-100">Tech Blogs</a>
+                  <a href="blogs.html#student" class="block px-4 py-2 hover:bg-gray-100">Student Stories</a>
+                </div>
+              </div>
+    
+              <a href="contact.html" class="nav-link">Contact</a>
+              <a href="partner.html" class="nav-link">Partner</a>
+              <a href="testimonial.html" class="nav-link">Testimonial</a>
+            </div>
+    
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+              <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+          <a href="index.html" class="block nav-link">Home</a>
+          <a href="about.html" class="block nav-link">About</a>
+    
+          <!-- Mobile dropdowns -->
+          <div>
+            <button class="block w-full text-left nav-link" onclick="toggleDropdown('coursesDropdown')">Courses</button>
+            <div id="coursesDropdown" class="hidden pl-4">
+              <a href="courses.html#web" class="block py-1">Web Development</a>
+              <a href="courses.html#data" class="block py-1">Data Science</a>
+            </div>
+          </div>
+    
+          <div>
+            <button class="block w-full text-left nav-link" onclick="toggleDropdown('blogsDropdown')">Blogs</button>
+            <div id="blogsDropdown" class="hidden pl-4">
+              <a href="blogs.html#tech" class="block py-1">Tech Blogs</a>
+              <a href="blogs.html#student" class="block py-1">Student Stories</a>
+            </div>
+          </div>
+    
+          <a href="contact.html" class="block nav-link">Contact</a>
+          <a href="partner.html" class="block nav-link">Partner</a>
+          <a href="testimonial.html" class="block nav-link">Testimonial</a>
+        </div>
+      </nav>
 
   <header>
     <h1>AI-Powered Courses for Your Career</h1>
@@ -210,6 +280,31 @@
   <footer class="footer">
     <p>&copy; 2025 AiTrainingTech | Learn AI. Build Your Future.</p>
   </footer>
+
+
+   <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+    
+        menuBtn.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+    
+        function toggleDropdown(id) {
+          const dropdown = document.getElementById(id);
+          dropdown.classList.toggle('hidden');
+        }
+    
+        // Active link color logic
+        const currentPath = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.nav-link').forEach(link => {
+          if (link.getAttribute('href') === currentPath) {
+            link.classList.add('text-[#f15a29]');
+          } else {
+            link.classList.add('text-gray-700', 'hover:text-[#f15a29]');
+          }
+        });
+  </script>
 </body>
 </html>
 
