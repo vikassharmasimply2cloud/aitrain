@@ -15,6 +15,97 @@
 </head>
 <body class="bg-white text-gray-800">
 
+   <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16 items-center">
+            <!-- Logo -->
+            <a href="index.html">
+              <img src="Logo.png" alt="Logo" class="h-10" />
+            </a>
+    
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 items-center">
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="about.html" class="nav-link">About</a>
+    
+              <!-- Courses Dropdown -->
+              <div class="relative group">
+                <button class="nav-link flex items-center gap-1 focus:outline-none" aria-haspopup="true">
+                  Courses <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="absolute left-0 hidden group-hover:block bg-white border rounded shadow-md w-40">
+                  <a href="courses.html" class="block px-4 py-2 hover:bg-gray-100">AI for Animation & Graphics</a>
+                  <a href="courses.html" class="block px-4 py-2 hover:bg-gray-100">AI-Powered Digital Marketing</a>
+                   <a href="courses.html" class="block px-4 py-2 hover:bg-gray-100">AI for Coding & App Development</a>
+                </div>
+              </div>
+    
+              <!-- Blogs Dropdown -->
+              <div class="relative group">
+                <button class="nav-link flex items-center gap-1 focus:outline-none">
+                  Blogs <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="absolute left-0 hidden group-hover:block bg-white border rounded shadow-md w-40">
+                  <a href="blogs.html#tech" class="block px-4 py-2 hover:bg-gray-100">Tech Blogs</a>
+                  <a href="blogs.html#student" class="block px-4 py-2 hover:bg-gray-100">Student Stories</a>
+                </div>
+              </div>
+    
+              <a href="contact.html" class="nav-link">Contact</a>
+              <a href="partner.html" class="nav-link">Partner</a>
+              <a href="testimonial.html" class="nav-link">Testimonial</a>
+            </div>
+    
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+              <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-1">
+          <a href="index.html" class="block nav-link">Home</a>
+          <a href="about.html" class="block nav-link">About</a>
+    
+          <!-- Mobile Dropdowns -->
+          <details class="group">
+            <summary class="nav-link cursor-pointer flex items-center justify-between">
+              Courses <span>▼</span>
+            </summary>
+            <div class="pl-4 mt-1 space-y-1">
+              <a href="courses.html#web" class="block">Web Development</a>
+              <a href="courses.html#data" class="block">Data Science</a>
+            </div>
+          </details>
+    
+          <details class="group">
+            <summary class="nav-link cursor-pointer flex items-center justify-between">
+              Blogs <span>▼</span>
+            </summary>
+            <div class="pl-4 mt-1 space-y-1">
+              <a href="blogs.html#tech" class="block">Tech Blogs</a>
+              <a href="blogs.html#student" class="block">Student Stories</a>
+            </div>
+          </details>
+    
+          <a href="contact.html" class="block nav-link">Contact</a>
+          <a href="partner.html" class="block nav-link">Partner</a>
+          <a href="testimonial.html" class="block nav-link">Testimonial</a>
+        </div>
+  </nav>
+
+
+  
   <header class="p-6 flex items-center">
     <img src="Logo.png" alt="AiTrainingTech Logo" class="h-10 mr-3">
     <h1 class="text-xl font-semibold">AiTrainingTech</h1>
@@ -60,6 +151,27 @@
     &copy; 2025 AiTrainingTech. All rights reserved.
   </footer>
 
+
+  <script>
+    // Toggle mobile menu
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    // Set active link
+    const path = window.location.pathname.split("/").pop();
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach(link => {
+      if (link.getAttribute("href") === path) {
+        link.classList.add("nav-active");
+      } else {
+        link.classList.add("text-gray-700", "hover:text-[#f15a29]");
+      }
+    });
+  </script>
 </body>
 </html>
 
