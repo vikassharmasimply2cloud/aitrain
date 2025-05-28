@@ -268,13 +268,16 @@
     <h2>Contact Us or Visit Us</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
       <div style="flex: 1 1 50%;">
-        <form action="#" method="POST">
+        <form id="leadForm" method="POST">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" required>
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
           <label for="phone">Phone</label>
           <input type="number" id="phone" name="phone" required>
+
+            <button type="submit">Submit</button>
+
         </form>
       </div>
       <div style="flex: 1 1 50%;">
