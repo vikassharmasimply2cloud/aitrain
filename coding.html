@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join our AI coding course in Pitampura. Learn Python, FastAPI, Supabase, GitHub & build real AI-powered web apps." />
+  <meta name="keywords" content="AI coding course Pitampura, Python course Pitampura, FastAPI Pitampura, Supabase, backend frontend course Delhi, API course Pitampura, AiTrainingTech Pitampura" />
+  <title>AI Coding Course in Pitampura | AiTrainingTech</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F9F5F0;
+      color: #1C1F38;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #F05A28;
+      color: white;
+      padding: 2rem;
+    }
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    h1, h2, h3 {
+      color: #1C1F38;
+    }
+    a.button {
+      background-color: #F05A28;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer {
+      background-color: #eee;
+      color: #444;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+  </style>
+</head>
+<body>
+
+
+   <nav class="bg-white shadow sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex justify-between h-16 items-center">
+            <!-- Logo -->
+            <a href="index.html">
+              <img src="Logo.png" alt="Logo" class="h-10" />
+            </a>
+    
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6 items-center">
+              <a href="index.html" class="nav-link">Home</a>
+              <a href="about.html" class="nav-link">About</a>
+    
+              <!-- Courses Dropdown -->
+              <div class="relative group">
+                <button class="nav-link flex items-center gap-1 focus:outline-none" aria-haspopup="true">
+                  Courses <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="absolute left-0 hidden group-hover:block bg-white border rounded shadow-md w-40">
+                  <a href="animation.html" class="block px-4 py-2 hover:bg-gray-100">AI for Animation & Graphics</a>
+                  <a href="marketing.html" class="block px-4 py-2 hover:bg-gray-100">AI-Powered Digital Marketing</a>
+                  <a href="coding.html" class="block px-4 py-2 hover:bg-gray-100">AI for Coding & App Development</a>
+                </div>
+              </div>
+    
+              <!-- Blogs Dropdown -->
+              <div class="relative group">
+                <button class="nav-link flex items-center gap-1 focus:outline-none">
+                  Blogs <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="absolute left-0 hidden group-hover:block bg-white border rounded shadow-md w-40">
+                  <a href="aitools.html" class="block px-4 py-2 hover:bg-gray-100">5 AI Tools Every Digital Marketer Should Learn</a>
+                  <a href="fastapi.html" class="block px-4 py-2 hover:bg-gray-100"> Beginners guide to FastAPI for AI Projects</a>
+                  <a href="aiapp.html" class="block px-4 py-2 hover:bg-gray-100">How to Build Your First AI App Without Coding</a>
+                  <a href="blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
+
+                </div>
+              </div>
+    
+              <a href="contact.html" class="nav-link">Contact</a>
+              <a href="partner.html" class="nav-link">Partner</a>
+              <a href="testimonial.html" class="nav-link">Testimonial</a>
+            </div>
+    
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+              <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pb-4 space-y-1">
+          <a href="index.html" class="block nav-link">Home</a>
+          <a href="about.html" class="block nav-link">About</a>
+    
+          <!-- Mobile Dropdowns -->
+          <details class="group">
+            <summary class="nav-link cursor-pointer flex items-center justify-between">
+              Courses <span>▼</span>
+            </summary>
+            <div class="pl-4 mt-1 space-y-1">
+              <a href="animation.html" class="block px-4 py-2 hover:bg-gray-100">AI for Animation & Graphics</a>
+              <a href="marketing.html" class="block px-4 py-2 hover:bg-gray-100">AI-Powered Digital Marketing</a>
+              <a href="coding.html" class="block px-4 py-2 hover:bg-gray-100">AI for Coding & App Development</a>
+            </div>
+          </details>
+    
+          <details class="group">
+            <summary class="nav-link cursor-pointer flex items-center justify-between">
+              Blogs <span>▼</span>
+            </summary>
+            <div class="pl-4 mt-1 space-y-1">
+                  <a href="aitools.html" class="block px-4 py-2 hover:bg-gray-100">5 AI Tools Every Digital Marketer Should Learn</a>
+                  <a href="fastapi.html" class="block px-4 py-2 hover:bg-gray-100"> Beginners guide to FastAPI for AI Projects</a>
+                  <a href="aiapp.html" class="block px-4 py-2 hover:bg-gray-100">How to Build Your First AI App Without Coding</a>
+                  <a href="blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
+            </div>
+          </details>
+    
+          <a href="contact.html" class="block nav-link">Contact</a>
+          <a href="partner.html" class="block nav-link">Partner</a>
+          <a href="testimonial.html" class="block nav-link">Testimonial</a>
+        </div>
+  </nav>
+
+  
+  <header>
+    <div>
+      <h1 style="font-size: 2rem; font-weight: 700;">AI for Coding – In-Person Course (Pitampura)</h1>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <p class="text-lg">Looking to break into tech from Pitampura? Our AI coding course teaches you how to build AI-powered web apps using Python, FastAPI, Supabase, and OpenAI tools. Learn full stack development through practical projects and expert-led in-person training.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Course Snapshot</h2>
+      <ul>
+        <li><strong>Duration:</strong> 3.5 Months</li>
+        <li><strong>Format:</strong> In-person, 3x/week</li>
+        <li><strong>Fee:</strong> ₹24,000</li>
+        <li><strong>Location:</strong> West Pitampura – Near Kohat Enclave Metro</li>
+        <li><strong>Level:</strong> Beginner to Intermediate</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Week-by-Week Curriculum</h2>
+      <div>
+        <h3 class="font-bold">Month 1: Python & Web Fundamentals</h3>
+        <ul>
+          <li>Python basics, functions, OOP</li>
+          <li>Git & GitHub version control</li>
+          <li>HTML, CSS & JavaScript overview</li>
+        </ul>
+        <h3 class="font-bold">Month 2: Backend & AI APIs</h3>
+        <ul>
+          <li>FastAPI basics and endpoints</li>
+          <li>Using OpenAI APIs with LangChain</li>
+          <li>Building and testing REST APIs</li>
+        </ul>
+        <h3 class="font-bold">Month 3: Full Stack Projects</h3>
+        <ul>
+          <li>Project 1: AI app using Lovable.dev + Supabase</li>
+          <li>Project 2: Full-stack build with Cursor (Next.js + FastAPI + Supabase)</li>
+          <li>Final app deployment and GitHub portfolio setup</li>
+        </ul>
+        <h3 class="font-bold">Bonus Module: Developer Productivity</h3>
+        <ul>
+          <li>Prompt engineering for developers</li>
+          <li>Freelance profile and client simulation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Who Should Join?</h2>
+      <ul>
+        <li>Students in North/West Delhi wanting in-demand tech skills</li>
+        <li>Aspiring developers preparing for freelancing or jobs</li>
+        <li>Career switchers and startup founders learning AI tools</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Contact & Enrollment</h2>
+      <p>Call or WhatsApp: +91-XXXXXXXXXX<br />
+         Email: hello@aitrainingtech.com</p>
+      <p><a href="/contact" class="button">Schedule a Free Trial Class</a></p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">Download Brochure or Visit Us</h2>
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <form class="bg-gray-100 p-6 rounded-lg shadow">
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-1">Your Name</label>
+            <input type="text" class="w-full border border-gray-300 p-2 rounded" placeholder="Enter your name">
+          </div>
+          <div class="mb-4">
+            <label class="block text-sm font-medium mb-1">Email Address</label>
+            <input type="email" class="w-full border border-gray-300 p-2 rounded" placeholder="Enter your email">
+          </div>
+          <button class="bg-orange-500 text-white px-6 py-2 rounded font-semibold w-full">Download Brochure</button>
+        </form>
+        <div class="bg-gray-100 h-64 rounded-lg">
+          <iframe src="https://maps.google.com/maps?q=pitampura%20delhi&t=&z=13&ie=UTF8&iwloc=&output=embed" class="w-full h-full rounded-lg" frameborder="0"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-2">FAQs</h2>
+      <ul>
+        <li><strong>Do I need coding experience?</strong> No, we start from the basics of Python and gradually progress.</li>
+        <li><strong>Will I build real-world projects?</strong> Yes, including a complete portfolio-ready web app.</li>
+        <li><strong>Is this course beginner friendly?</strong> Absolutely — we cover every tool step-by-step.</li>
+        <li><strong>Will I get a certificate?</strong> Yes, you’ll receive an official course completion certificate.</li>
+        <li><strong>Do you offer placement or freelancing help?</strong> Yes, we guide you in setting up your GitHub portfolio and exploring freelance platforms.</li>
+        <li><strong>What tools will I use?</strong> Python, FastAPI, Supabase, OpenAI APIs, LangChain, GitHub.</li>
+        <li><strong>Can I take a trial class?</strong> Yes, we encourage you to schedule a free in-person trial.</li>
+        <li><strong>Is weekend batch available?</strong> Yes, depending on demand. Contact us to confirm timing options.</li>
+        <li><strong>Do I need my own laptop?</strong> Yes, we recommend bringing one. We also have limited systems onsite.</li>
+      </ul>
+    </section>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do I need coding experience?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, we start from the basics of Python and gradually progress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I build real-world projects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, including a complete portfolio-ready web app."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this course beginner friendly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely — we cover every tool step-by-step."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I get a certificate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, you’ll receive an official course completion certificate."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer placement or freelancing help?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we guide you in setting up your GitHub portfolio and exploring freelance platforms."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What tools will I use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Python, FastAPI, Supabase, OpenAI APIs, LangChain, GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I take a trial class?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we encourage you to schedule a free in-person trial."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is weekend batch available?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, depending on demand. Contact us to confirm timing options."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need my own laptop?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we recommend bringing one. We also have limited systems onsite."
+          }
+        }
+      ]
+    }
+    </script>
+  </main>
+
+    <footer class="bg-white border-t mt-12">
+  <div class="max-w-7xl mx-auto px-4 py-10 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Logo and Description -->
+      <div>
+        <a href="index.html">
+          <img src="Logo.png" alt="AiTrainingTech Logo" class="h-12 mb-4">
+        </a>
+        <p class="text-gray-600 text-sm">
+          AiTrainingTech offers hands-on AI training in Delhi for digital marketers, developers, and creatives.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3 text-gray-800">Quick Links</h4>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li><a href="index.html" class="hover:text-brand-orange">Home</a></li>
+          <li><a href="about.html" class="hover:text-brand-orange">About</a></li>
+          <li><a href="contact.html" class="hover:text-brand-orange">Contact</a></li>
+          <li><a href="partner.html" class="hover:text-brand-orange">Partner</a></li>
+          <li><a href="testimonial.html" class="hover:text-brand-orange">Testimonials</a></li>
+        </ul>
+      </div>
+
+      <!-- Courses -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3 text-gray-800">Courses</h4>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li><a href="courses.html" class="hover:text-brand-orange">AI for Animation & Graphics</a></li>
+          <li><a href="courses.html" class="hover:text-brand-orange">AI-Powered Digital Marketing</a></li>
+          <li><a href="courses.html" class="hover:text-brand-orange">AI for Coding & App Development</a></li>
+        </ul>
+      </div>
+
+      <!-- Blog Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3 text-gray-800">Blogs</h4>
+        <ul class="space-y-2 text-sm text-gray-600">
+          <li><a href="aitools.html" class="hover:text-brand-orange">Top AI Tools for Marketers</a></li>
+          <li><a href="fastapi.html" class="hover:text-brand-orange">FastAPI for AI Projects</a></li>
+          <li><a href="blogs.html" class="hover:text-brand-orange">AI App Without Coding</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t mt-10 pt-6 text-center text-sm text-gray-500">
+      &copy; 2025 AiTrainingTech. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+
+  
+  <script>
+    // Toggle mobile menu
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    // Set active link
+    const path = window.location.pathname.split("/").pop();
+    const links = document.querySelectorAll(".nav-link");
+    links.forEach(link => {
+      if (link.getAttribute("href") === path) {
+        link.classList.add("nav-active");
+      } else {
+        link.classList.add("text-gray-700", "hover:text-[#f15a29]");
+      }
+    });
+  </script>
+</body>
+</html>
+
+
