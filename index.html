@@ -274,8 +274,8 @@
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
+          <input type="number" id="phone" name="phone" required>
+          <label for="phone">Phone</label>
         </form>
       </div>
       <div style="flex: 1 1 50%;">
@@ -365,6 +365,38 @@
       }
     });
   </script>
+
+  <script>
+  document.getElementById("leadForm").addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const email = document.getElementById("email").value;
+
+    try {
+      const response = await fetch("https://crmhut.com/aitrainingtech.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams({
+          name: name,
+          phone: phone,
+          email: email
+        })
+      });
+
+      const text = await response.text(); // If it's a plain response
+      alert("Submitted successfully!\nResponse: " + text);
+
+    } catch (error) {
+      alert("Error submitting form: " + error.message);
+      console.error("Error:", error);
+    }
+  });
+</script>
+
 </body>
 </html>
 
